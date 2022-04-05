@@ -1,4 +1,10 @@
 const crypto = require('crypto');
+
+
+
+const smsSid = process.env.SMS_SID;
+const smsAuthToken = process.env.SMS_AUTH_TOKEN
+const twilio = require('twilio')(smsSid)
 class OtpService{
 
 	async generateOtp(){
